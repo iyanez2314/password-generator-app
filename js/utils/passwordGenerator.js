@@ -1,3 +1,13 @@
+/**
+ *
+ * @param {*} length - The length of the password we need to generate
+ * @param {*} includeLower - Boolean value to include lower case characters
+ * @param {*} includeUpper - Boolean value to include upper case characters
+ * @param {*} includeNumbers - Boolean value to include numbers
+ * @param {*} includeSymbols - Boolean value to include symbols
+ * @returns the generated password
+ */
+
 function generatePassword(
   length,
   includeLower,

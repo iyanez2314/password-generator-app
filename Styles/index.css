@@ -1,0 +1,95 @@
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@700&display=swap");
+
+:root {
+  --Main-text: "JetBrains Mono", monospace;
+  --Background: #14131b;
+  --Washed-black: #24232c;
+  --Grey: #817d92;
+  --White: #e6e5ea;
+  --Black: #18171f;
+  --Neon-green: #a4ffaf;
+  --Red: #f64a4a;
+  --Orange: #f8cd65;
+  --Heading-Large: 32px;
+  --Heading-Medium: 24px;
+  --Body-Medium: 18px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: var(--Background);
+}
+
+@media only screen and (max-width: 390px) {
+  #wrapper {
+    min-height: 100vh;
+  }
+
+  #header-container {
+    margin-top: 85px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .header {
+    font-size: 16px;
+    color: var(--Grey);
+    font-family: var(--Main-text);
+  }
+
+  #password-conatiner {
+    height: 64px;
+    background: var(--Washed-black);
+    margin: 15px;
+    display: flex;
+    align-items: center;
+  }
+
+  #options {
+    background: var(--Washed-black);
+    height: 423px;
+    margin: 15px;
+  }
+
+  #chatacter-length-container {
+    display: flex;
+    justify-content: center;
+    padding-top: 15px;
+  }
+
+  .left > p {
+    color: var(--White);
+    font-size: 16px;
+    font-family: var(--Main-text);
+  }
+
+  .right > p {
+    color: var(--Neon-green);
+    font-family: var(--Main-text);
+    font-size: var(--Body-Medium);
+  }
+  .left {
+    width: 50%;
+    padding-left: 10px;
+  }
+
+  .right {
+    width: 50%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    padding-right: 9px;
+  }
+
+  .heading-medium {
+    font-size: var(--Heading-Medium);
+    color: var(--White);
+    font-family: var(--Main-text);
+    font-size: var(--Body-Medium);
+  }
+}
