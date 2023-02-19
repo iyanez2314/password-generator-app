@@ -39,6 +39,97 @@
             <p>10</p>
           </div>
         </div>
+
+        <div class="slidecontainer">
+          <input
+            type="range"
+            min="1"
+            max="100"
+            value="50"
+            class="slider"
+            id="myRange"
+          />
+        </div>
+
+        <div class="options-checks">
+          <label class="container">
+            <input
+              type="checkbox"
+              name="uppercase"
+              checked="checked"
+              id="uppercase"
+              class="checkbox"
+            />
+            <span class="checkmark"
+              ><img src="./assets/images/icon-check.svg"
+            /></span>
+            <div class="checkbox-text">
+              <label for="uppercase">Include Uppercase Letters</label>
+            </div>
+          </label>
+
+          <label class="container">
+            <input
+              type="checkbox"
+              name="lowercase"
+              checked="checked"
+              id="lowercase"
+              class="checkbox"
+            />
+            <span class="checkmark"
+              ><img src="./assets/images/icon-check.svg"
+            /></span>
+            <div class="checkbox-text">
+              <label for="lowercase">Include Lowercase Letters</label>
+            </div>
+          </label>
+
+          <label class="container">
+            <input
+              type="checkbox"
+              name="numbers"
+              checked="checked"
+              id="numbers"
+              class="checkbox"
+            />
+            <span class="checkmark"
+              ><img src="./assets/images/icon-check.svg"
+            /></span>
+            <div class="checkbox-text">
+              <label for="numbers">Include Numbers</label>
+            </div>
+          </label>
+          <label class="container">
+            <input
+              type="checkbox"
+              name="symbols"
+              checked="checked"
+              id="symbols"
+              class="checkbox"
+            />
+            <span class="checkmark"
+              ><img src="./assets/images/icon-check.svg"
+            /></span>
+            <div class="checkbox-text">
+              <label for="symbols">Include Symbols</label>
+            </div>
+          </label>
+        </div>
+
+        <div id="strength-meter-container">
+          <div class="left flex-start">
+            <p>STRENGTH</p>
+          </div>
+          <div class="right pws">
+            <p id="password-strength">MEDIUM</p>
+          </div>
+        </div>
+        <div id="generate-btn-container">
+          <button>
+            Generate
+            <span><img src="./assets/images/icon-arrow-right.svg" /></span>
+          </button>
+        </div>
       </div>
     </div>
     <!-- <script src="./js/utils/passwordGenerator.js"></script>
