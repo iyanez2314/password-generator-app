@@ -36,7 +36,7 @@
             <p>Character Length</p>
           </div>
           <div class="right">
-            <p id="slider-output">5</p>
+            <p id="slider-output">1</p>
           </div>
         </div>
 
@@ -45,7 +45,7 @@
             type="range"
             min="1"
             max="10"
-            value="5"
+            value="1"
             class="slider"
             id="myRange"
           />
@@ -71,9 +71,6 @@
               id="lowercase"
               class="checkbox"
             />
-            <!-- <span class="checkmark"
-              ><img src="./assets/images/icon-check.svg"
-            /></span> -->
             <div class="checkbox-text">
               <label for="lowercase">Include Lowercase Letters</label>
             </div>
@@ -86,9 +83,6 @@
               id="numbers"
               class="checkbox"
             />
-            <!-- <span class="checkmark"
-              ><img src="./assets/images/icon-check.svg"
-            /></span> -->
             <div class="checkbox-text">
               <label for="numbers">Include Numbers</label>
             </div>
@@ -100,9 +94,6 @@
               id="symbols"
               class="checkbox"
             />
-            <!-- <span class="checkmark"
-              ><img src="./assets/images/icon-check.svg"
-            /></span> -->
             <div class="checkbox-text">
               <label for="symbols">Include Symbols</label>
             </div>
@@ -114,13 +105,21 @@
             <p>STRENGTH</p>
           </div>
           <div class="right pws">
-            <p id="password-strength">MEDIUM</p>
+            <p id="password-strength"></p>
+            <div class="password-rating-container">
+              <div class="strength-meters"></div>
+              <div class="strength-meters"></div>
+              <div class="strength-meters"></div>
+              <div class="strength-meters"></div>
+            </div>
           </div>
         </div>
         <div id="generate-btn-container">
           <button id="generate-btn">
             Generate
-            <span><img src="./assets/images/icon-arrow-right.svg" /></span>
+            <span
+              ><img id="arrow" src="./assets/images/icon-arrow-right.svg"
+            /></span>
           </button>
         </div>
       </div>

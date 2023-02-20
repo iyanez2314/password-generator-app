@@ -8,7 +8,10 @@ const sliderOutputElem = document.querySelector("#slider-output");
 const copyButtonElem = document.querySelector("#copy-btn");
 const checkboxElements = document.querySelectorAll(".checkbox");
 const generateButtonElem = document.querySelector("#generate-btn");
+const passwordStrengthElem = document.querySelector("#password-strength");
+
 let passowrdLength = sliderElem.value;
+
 /**
  * Will hold state of wether the user wants any of the options for the password
  */
@@ -31,7 +34,20 @@ function updateState(checkbox) {
 /**
  * Will Display the value of what ever the slider value is
  */
+
 sliderElem.oninput = function () {
+  if (this.value <= 3) {
+    passwordStrengthElem.innerHTML = "TOO WEAK!";
+  }
+  if (this.value >= 5) {
+    passwordStrengthElem.innerHTML = "WEAK";
+  }
+  if (this.value >= 7) {
+    passwordStrengthElem.innerHTML = "MEDIUM";
+  }
+  if (this.value > 7) {
+    passwordStrengthElem.innerHTML = "STRONG";
+  }
   sliderOutputElem.innerHTML = this.value;
   passowrdLength = this.value;
 };
@@ -70,6 +86,7 @@ function getCheckboxes(checkboxes) {
       checked.push(checkboxes[i].getAttribute("name"));
     }
   }
+
   return checked;
 }
 

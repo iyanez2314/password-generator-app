@@ -57,23 +57,23 @@ body {
   align-items: center;
   flex-direction: column;
   background: var(--Washed-black);
-  height: 423px;
+  height: 462px;
   margin: 15px;
   width: 540px;
 }
 #chatacter-length-container {
   display: flex;
-  width: 100%;
+  width: 476px;
 }
 .slidecontainer {
   margin-top: 15px;
   display: flex;
   justify-content: center;
-  width: 95%;
+  width: 475px;
 }
 .slider {
+  width: 461px;
   -webkit-appearance: none;
-  width: 100%;
   height: 15px;
   background: var(--Black);
   outline: none;
@@ -83,7 +83,7 @@ body {
 }
 .options-checks {
   margin-top: 30px;
-  width: 95%;
+  width: 460px;
 }
 .left-checks {
   padding-left: 2px;
@@ -101,6 +101,13 @@ body {
   cursor: pointer;
   border-radius: 100px;
 }
+
+.slider::-webkit-slider-thumb:active {
+  background: var(--Black);
+  border-color: var(--Neon-green);
+  border-width: 20px;
+}
+
 .container {
   display: flex;
   position: relative;
@@ -145,14 +152,14 @@ body {
 #strength-meter-container {
   display: flex;
   background: var(--Black);
-  width: 95%;
   height: 56px;
+  width: 465px;
 }
 
 #generate-btn-container {
   margin: 15px;
-  width: 100%;
   padding-left: 20px;
+  width: 487px;
 }
 
 button {
@@ -166,6 +173,11 @@ button {
   font-family: var(--Main-text);
   color: var(--Washed-black);
   font-size: 16px;
+}
+
+button:active {
+  background-color: var(--Washed-black);
+  color: var(--Neon-green);
 }
 
 button > span {
@@ -231,10 +243,10 @@ input[type="checkbox"] {
   background-color: var(--Washed-black);
   margin: 0;
   font: inherit;
-  color: var(--White);
+  color: var(--Neon-green);
   width: 20px;
   height: 20px;
-  border: 0.15em solid currentColor;
+  border: 0.1em solid currentColor;
   transform: translateY(-0.075em);
   display: grid;
   place-content: center;
@@ -247,11 +259,25 @@ input[type="checkbox"]::before {
   transform: scale(0);
   transition: 120ms transform ease-in-out;
   box-shadow: inset 1em 1em var(--Neon-green);
-  background-image: url("../assets/images/icon-check.svg");
+  transform-origin: bottom left;
+  clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
 }
 
 input[type="checkbox"]:checked::before {
   transform: scale(1);
+}
+
+.strength-meters {
+  width: 10px;
+  height: 28px;
+  border: 1px solid var(--White);
+  margin: 5px;
+}
+
+.password-rating-container {
+  display: flex;
+  align-items: center;
+  margin: 20px;
 }
 
 @media only screen and (max-width: 750px) {
@@ -283,7 +309,7 @@ input[type="checkbox"]:checked::before {
     align-items: center;
     flex-direction: column;
     background: var(--Washed-black);
-    height: 423px;
+    height: 456px;
     margin: 15px;
     width: 476px;
   }
@@ -401,6 +427,16 @@ input[type="checkbox"]:checked::before {
     padding-left: 12px;
   }
 
+  .password-rating-container {
+    display: flex;
+    align-items: center;
+    margin: 20px;
+  }
+
+  .strength-meters {
+    margin: 5px;
+  }
+
   .left > p {
     color: var(--White);
     font-size: 16px;
@@ -457,10 +493,10 @@ input[type="checkbox"]:checked::before {
     background-color: var(--Washed-black);
     margin: 0;
     font: inherit;
-    color: var(--White);
+    color: var(--Neon-green);
     width: 20px;
     height: 20px;
-    border: 0.15em solid currentColor;
+    border: 0.1em solid currentColor;
     transform: translateY(-0.075em);
     display: grid;
     place-content: center;
@@ -473,7 +509,8 @@ input[type="checkbox"]:checked::before {
     transform: scale(0);
     transition: 120ms transform ease-in-out;
     box-shadow: inset 1em 1em var(--Neon-green);
-    background-image: url("../assets/images/icon-check.svg");
+    transform-origin: bottom left;
+    clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
   }
 
   input[type="checkbox"]:checked::before {
@@ -594,7 +631,6 @@ input[type="checkbox"]:checked::before {
   }
 
   .checkbox {
-    background: blue;
     position: absolute;
     height: 20px;
     width: 20px;
@@ -641,6 +677,16 @@ input[type="checkbox"]:checked::before {
     justify-content: center;
     align-items: center;
     padding-left: 12px;
+  }
+
+  .password-rating-container {
+    display: flex;
+    align-items: center;
+    margin: 20px;
+  }
+
+  .strength-meters {
+    margin: 5px;
   }
 
   .left > p {
@@ -699,10 +745,10 @@ input[type="checkbox"]:checked::before {
     background-color: var(--Washed-black);
     margin: 0;
     font: inherit;
-    color: var(--White);
+    color: var(--Neon-green);
     width: 20px;
     height: 20px;
-    border: 0.15em solid currentColor;
+    border: 0.1em solid currentColor;
     transform: translateY(-0.075em);
     display: grid;
     place-content: center;
@@ -715,7 +761,8 @@ input[type="checkbox"]:checked::before {
     transform: scale(0);
     transition: 120ms transform ease-in-out;
     box-shadow: inset 1em 1em var(--Neon-green);
-    background-image: url("../assets/images/icon-check.svg");
+    transform-origin: bottom left;
+    clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
   }
 
   input[type="checkbox"]:checked::before {
