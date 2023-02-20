@@ -41,3 +41,11 @@ function randomizeSpecialChar() {
   }
   return password;
 }
+
+async function clipboard() {
+  try {
+    await navigator.clipboard.writeText(generatedPasswordElem.innerHTML);
+  } catch (err) {
+    console("Failed to copy: ", err);
+  }
+}

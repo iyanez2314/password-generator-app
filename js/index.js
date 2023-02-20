@@ -8,8 +8,6 @@ const sliderOutputElem = document.querySelector("#slider-output");
 const copyButtonElem = document.querySelector("#copy-btn");
 const checkboxElements = document.querySelectorAll(".checkbox");
 const generateButtonElem = document.querySelector("#generate-btn");
-const passwordStrengthElem = document.querySelector("#password-strength");
-
 let passowrdLength = sliderElem.value;
 
 /**
@@ -36,18 +34,8 @@ function updateState(checkbox) {
  */
 
 sliderElem.oninput = function () {
-  if (this.value <= 3) {
-    passwordStrengthElem.innerHTML = "TOO WEAK!";
-  }
-  if (this.value >= 5) {
-    passwordStrengthElem.innerHTML = "WEAK";
-  }
-  if (this.value >= 7) {
-    passwordStrengthElem.innerHTML = "MEDIUM";
-  }
-  if (this.value > 7) {
-    passwordStrengthElem.innerHTML = "STRONG";
-  }
+  passwordStrengthText(this.value);
+  divColor(this.value);
   sliderOutputElem.innerHTML = this.value;
   passowrdLength = this.value;
 };
@@ -64,14 +52,6 @@ checkboxElements.forEach((checkbox) => {
 /**
  * Will Give us the possibility to copy what ever is generated for the passowrd to the clipboard
  */
-async function clipboard() {
-  try {
-    await navigator.clipboard.writeText(generatedPasswordElem.innerHTML);
-    console.log("Content copied to clipboard");
-  } catch (err) {
-    console("Failed to copy: ", err);
-  }
-}
 
 /**
  *
