@@ -35,7 +35,6 @@ function updateState(checkbox) {
 
 sliderElem.oninput = function () {
   passwordStrengthText(this.value);
-  divColor(this.value);
   sliderOutputElem.innerHTML = this.value;
   passowrdLength = this.value;
 };
