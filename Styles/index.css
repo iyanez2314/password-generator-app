@@ -33,6 +33,20 @@ body {
   align-items: center;
 }
 
+.copied-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+}
+
+.copied-container > p {
+  font-size: var(--Body-Medium);
+  font-family: var(--Main-text);
+  color: var(--Neon-green);
+  display: none;
+}
+
 #header-container {
   margin-top: 85px;
   display: flex;

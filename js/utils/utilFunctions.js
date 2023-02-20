@@ -1,3 +1,4 @@
+const coppiedTextElem = document.querySelector(".copied-container > p");
 // Randomizer for Lower Case Letters
 function randomizeLower() {
   let password = "";
@@ -45,6 +46,7 @@ function randomizeSpecialChar() {
 async function clipboard() {
   try {
     await navigator.clipboard.writeText(generatedPasswordElem.innerHTML);
+    coppiedTextElem.style["display"] = "block";
   } catch (err) {
     console("Failed to copy: ", err);
   }
