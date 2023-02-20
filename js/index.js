@@ -8,9 +8,10 @@ const sliderOutputElem = document.querySelector("#slider-output");
 const copyButtonElem = document.querySelector("#copy-btn");
 const checkboxElements = document.querySelectorAll(".checkbox");
 const generateButtonElem = document.querySelector("#generate-btn");
-console.log(checkboxElements);
 let passowrdLength = sliderElem.value;
-
+/**
+ * Will hold state of wether the user wants any of the options for the password
+ */
 const state = {
   lowercase: false,
   uppercase: false,
@@ -18,6 +19,10 @@ const state = {
   symbols: false,
 };
 
+/**
+ * This function will take in the checkbox we have clicked get the attribute name and then we create a variable that will hold a boolean value if the button is clicked or not.
+ * @param {*} checkbox will be the option we chose in the checkbox
+ */
 function updateState(checkbox) {
   const name = checkbox.getAttribute("name");
   const checked = checkbox.checked;
@@ -31,6 +36,9 @@ sliderElem.oninput = function () {
   passowrdLength = this.value;
 };
 
+/**
+ * on the check box elements we add a event listener that will add the updateState function to it passing in said checkbox element.
+ */
 checkboxElements.forEach((checkbox) => {
   checkbox.addEventListener("click", function () {
     updateState(checkbox);
@@ -66,6 +74,7 @@ function getCheckboxes(checkboxes) {
 }
 
 copyButtonElem.addEventListener("click", clipboard);
+
 generateButtonElem.addEventListener("click", function () {
   const checkedItems = getCheckboxes(checkboxElements);
   if (checkedItems.length === 0) {
