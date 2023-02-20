@@ -144,7 +144,7 @@ body {
   }
 
   .checkbox-text > label {
-    padding-left: 20px;
+    padding-left: 38px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -234,5 +234,34 @@ body {
     display: flex;
     justify-content: flex-start;
     width: 50%;
+  }
+
+  input[type="checkbox"] {
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: var(--Washed-black);
+    margin: 0;
+    font: inherit;
+    color: var(--White);
+    width: 20px;
+    height: 20px;
+    border: 0.15em solid currentColor;
+    transform: translateY(-0.075em);
+    display: grid;
+    place-content: center;
+  }
+
+  input[type="checkbox"]::before {
+    content: "";
+    width: 0.65em;
+    height: 0.65em;
+    transform: scale(0);
+    transition: 120ms transform ease-in-out;
+    box-shadow: inset 1em 1em var(--Neon-green);
+    background-image: url("../assets/images/icon-check.svg");
+  }
+
+  input[type="checkbox"]:checked::before {
+    transform: scale(1);
   }
 }
